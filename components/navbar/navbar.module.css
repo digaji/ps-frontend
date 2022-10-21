@@ -1,0 +1,25 @@
+.keren{
+    display: flex;
+    margin-right: 10px;
+    color: black;
+    font: 200;
+
+    align-items: center;
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.wtf{
+    margin-right: 100px;
+}
+
+.logo{
+    width:120px;
+}
+
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
