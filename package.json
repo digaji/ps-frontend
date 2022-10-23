@@ -9,26 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.11",
-    "@chakra-ui/react": "^2.3.6",
-    "@emotion/cache": "^11.10.3",
-    "@emotion/react": "^11.10.4",
-    "@emotion/server": "latest",
-    "@emotion/styled": "^11.10.4",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "chakra-ui": "^0.3.9",
-    "framer-motion": "^7.6.1",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "css-loader": "^6.7.1",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "typescript": "latest"
+    "@types/node": "18.11.3",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.12",
+    "eslint": "8.26.0",
+    "eslint-config-next": "12.3.1",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.2.1",
+    "typescript": "4.8.4"
   }
 }
