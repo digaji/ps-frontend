@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
+      className='absolute left-0 top-0 w-full z-10 ease-in duration-300'
     >
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-black'>
         <Link href='/'>
@@ -38,16 +38,16 @@ const Navbar = () => {
       />
         </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
-          <li className='p-4 font-bold'>
+          <li className='p-4 font-bold text-[22px]'>
             <Link href='/'>Home</Link>
           </li>
-          <li className='p-4 font-bold'>
+          <li className='p-4 font-bold text-[22px]'>
             <Link href='/project'>Projects</Link>
           </li>
-          <li className='p-4 font-bold'>
+          <li className='p-4 font-bold text-[22px]'>
             <Link href='/publish'>Publish</Link>
           </li>
-          <li className='p-4 font-bold'>
+          <li className='p-4 font-bold text-[22px]'>
             <Link href='/profile'>Profile</Link>
           </li>
         </ul>
@@ -64,21 +64,21 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-300'
-              : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-300'
+              ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#2c6698] text-white text-center ease-in duration-300'
+              : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#2c6698] text-white text-center ease-in duration-300'
           }
         >
           <ul>
-            <li onClick={handleNav} className='p-4 font-normal hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 font-bold hover:text-gray-500'>
               <Link href='/'>Home</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 font-bold hover:text-gray-500'>
               <Link href='/#gallery'>Projects</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 font-bold hover:text-gray-500'>
               <Link href='/work'>Publish</Link>
             </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 font-bold hover:text-gray-500'>
               <Link href='/contact'>Profile</Link>
             </li>
           </ul>
