@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className="absolute left-0 top-0 w-full z-10 ease-in duration-300"
+      className="  left-0 top-0 w-full ease-in duration-300"
     >
       <div className="max-w-[100%] m-auto flex justify-between items-center p-4 text-black">
         <Link href="/">
@@ -51,7 +51,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Button */}
-        <div onClick={handleNav} className="block sm:hidden z-10">
+        <div onClick={handleNav} className="block sm:hidden ">
           {nav ? (
             <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
           ) : (
