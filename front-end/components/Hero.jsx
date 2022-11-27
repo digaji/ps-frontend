@@ -1,17 +1,12 @@
 import React from 'react';
+import ProjectCard from "../components/ProjectCard";
+import ProfilePage from "../components/ProfilePage";
 
 const Hero = () => {
   return (
-   <div className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img'>
-
-   <div/>
-   <div>
-    <h2></h2>
-    <p></p>
-    <button></button>
-
-
-   </div>
+    <div>
+       <ProfilePage />
+       <ProjectCard />
    </div>
 
   );

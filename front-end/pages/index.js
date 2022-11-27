@@ -10,8 +10,7 @@ export default function Home() {
     <>
       <div>
         <Navbar />
-        <ProfilePage />
-        <ProjectCard />
+        <Hero />
       </div>
     </>
   );
