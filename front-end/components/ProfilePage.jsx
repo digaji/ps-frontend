@@ -1,6 +1,16 @@
 import React from "react";
 
 const ProfilePage = () => {
+  function updatePreview() {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(open.files[0]);
+    fileReader.addEventListener('load', () =>{
+      const url = fileReader.result;
+      const img = new Image
+      img.src = url;
+      document.body.appendChild(img);
+    });
+  }
   return (
     <>
         {/* <div className="grid grid-cols-4 gap-4 py-20 px-40">
@@ -19,14 +29,22 @@ const ProfilePage = () => {
 
 
   </div>
- </div> */}
-
-<div class="grid grid-cols-4 gap-4">
-  <div class="object-left-top row-span-3 py-20 px-40">
-  <div class="overflow-hidden relative w-48 h-48 bg-gray-100 rounded-full dark:bg-gray-600">
-    <svg class="absolute -left-1 w-12 h-12 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"></svg>
-</div>
-    </div>
+  </div> */}
+   <div className="grid grid-cols-4 gap-4">
+   <label className="cursor-pointer object-left-top row-span-3 py-20 px-40">
+          <div className="overflow-hidden relative w-48 h-48 bg-gray-100 rounded-full dark:bg-gray-600">
+            <svg
+              className="absolute -left-1 w-12 h-12 text-gray-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            ></svg>
+            <div class="w-48 h-48 group hover:bg-gray-200 opacity-60 rounded-full absolute flex justify-center items-center cursor-pointer transition duration-500">
+    <img class="hidden group-hover:block w-12" src="https://www.svgrepo.com/show/33565/upload.svg" alt="" />
+  </div>
+  <input type="file" class="hidden" id="image" onchange="updatePreview()" />
+          </div>
+        </label>
   <div class="col-span-2 font-Inter text-black text-[40px] md:text-[40px] font-[700] pt-20 "> John Doe </div>
   <div class="col-span-2 pt-0"> Semester 5, 2025</div>
   <div class="col-span-2 col-span-2 box-content h-20 w-90 p-4 bg-[#EEEE] m4 pt">
