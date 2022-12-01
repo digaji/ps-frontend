@@ -1,6 +1,12 @@
 import React from "react";
 
-const ProfilePage = () => {
+/**
+ * Renders information about the user obtained from MS Graph
+ * @param props 
+ */
+
+const ProfilePage = (props) => {
+
   return (
     <>
       {/* <div className="grid grid-cols-4 gap-4 py-20 px-40">
@@ -33,7 +39,7 @@ const ProfilePage = () => {
           </div>
         </div>
         <div className="col-span-2 font-Inter text-black text-[40px] md:text-[40px] font-[700] pt-20 ">
-          John Doe
+        { props.graphData ? <div> {props.graphData.givenName} + {props.graphData.surName} </div> : <div> John Doe </div> }
         </div>
         <div className="col-span-2 pt-0"> Semester 5, 2025</div>
         <div className="col-span-2 box-content h-20 w-90 p-4 bg-[#EEEE] m4 pt">
