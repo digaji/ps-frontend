@@ -3,6 +3,7 @@ import { useMsal } from "@azure/msal-react";
 import ProjectCard from "../components/ProjectCard";
 import ProfilePage from "../components/ProfilePage";
 import { loginRequest } from "../azureAuth.config";
+import { callMsGraph } from "../azureGraph.config";
 
 const Hero = () => {
   const {instance, accounts} = useMsal();

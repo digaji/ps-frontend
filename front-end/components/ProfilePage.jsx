@@ -39,7 +39,7 @@ const ProfilePage = (props) => {
           </div>
         </div>
         <div className="col-span-2 font-Inter text-black text-[40px] md:text-[40px] font-[700] pt-20 ">
-        { props.graphData ? <div> {props.graphData.givenName} + {props.graphData.surName} </div> : <div> John Doe </div> }
+        { props.graphData ? <div> {props.graphData.givenName} {props.graphData.surname} </div> : <div> John Doe </div> }
         </div>
         <div className="col-span-2 pt-0"> Semester 5, 2025</div>
         <div className="col-span-2 box-content h-20 w-90 p-4 bg-[#EEEE] m4 pt">
