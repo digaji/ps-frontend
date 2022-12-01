@@ -1,7 +1,4 @@
 import React from "react";
-// import poster1 from "../src/poster1.png";
-// import poster2 from "../src/poster2.png";
-// import poster3 from "../src/poster3.png";
 
 const ProjectCard = () => {
   return (
@@ -16,13 +13,12 @@ const ProjectCard = () => {
           <div className="bg-gray-300 rounded shadow-2xl">
             <div className="p-8 text-center">
               <img
-                class="pt-2 mt-4 hero container max-w-screen-lg mx-auto pb-10 flex h-48 w-96 md:w-[250px] md:h-[350px]"
-                // src={poster1}
+                className="pt-2 mt-4 hero container max-w-screen-lg mx-auto pb-10 flex h-48 w-96 md:w-[250px] md:h-[350px]"
                 src="https://cdn.discordapp.com/attachments/1031973075371184228/1047529227886542878/image.png"
                 // width="150"
                 // height="150"
               ></img>
-              <div className="pl-2 font-bold font-Inter text-black text-[20px] md:text-[24px] font-[700]">
+              <div className="pl-2 font-bold font-Inter text-black text-[20px] md:text-[24px]">
                 Project1
               </div>
               <div>
@@ -33,13 +29,12 @@ const ProjectCard = () => {
           <div className="bg-gray-300 rounded shadow-2xl">
             <div className="p-8 text-center">
               <img
-                class="pt-2 mt-4 hero container max-w-screen-lg mx-auto pb-10 flex w-[200px] h-[230px] md:w-[250px] md:h-[350px]"
-                // src={poster2}
+                className="pt-2 mt-4 hero container max-w-screen-lg mx-auto pb-10 flex w-[200px] h-[230px] md:w-[250px] md:h-[350px]"
                 src="https://cdn.discordapp.com/attachments/1031973075371184228/1047529323537649795/image.png"
                 // width="150"
                 // height="150"
               ></img>
-              <div className="pl-2 font-bold font-Inter text-black text-[20px] md:text-[24px] font-[700]">
+              <div className="pl-2 font-bold font-Inter text-black text-[20px] md:text-[24px]">
                 Project2
               </div>
               <div>
@@ -50,13 +45,12 @@ const ProjectCard = () => {
           <div className="bg-gray-300 rounded shadow-2xl">
             <div className="p-8 text-center">
               <img
-                class="pt-2 mt-4 hero container max-w-screen-lg mx-auto pb-10 flex w-[200px] h-[230px] md:w-[250px] md:h-[350px]"
-                // src={poster3}
+                className="pt-2 mt-4 hero container max-w-screen-lg mx-auto pb-10 flex w-[200px] h-[230px] md:w-[250px] md:h-[350px]"
                 src="https://cdn.discordapp.com/attachments/1031973075371184228/1047529352197308516/image.png"
                 // width="150"
                 // height="150"
               ></img>
-              <div className="pl-2 font-bold font-Inter text-black text-[20px] md:text-[24px] font-[700]">
+              <div className="pl-2 font-bold font-Inter text-black text-[20px] md:text-[24px]">
                 Project3
               </div>
               <div>
