@@ -25,8 +25,7 @@ function ProfilePage(){
   <div class="preview">
    <img id="file-ip-1-preview"/>
  </div>
-          </div>
-        </div>
+</div>
       
   <div class="col-span-2 font-Inter text-black text-[40px] md:text-[40px] font-[700] pt-20 "> John Doe </div>
   <div class="col-span-2 pt-0"> Semester 5, 2025</div>
@@ -41,9 +40,7 @@ function ProfilePage(){
 
     </div> 
 </div>
-
   );
 };
 
 export default ProfilePage;
-
