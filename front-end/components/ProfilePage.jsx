@@ -1,4 +1,11 @@
+<<<<<<< Updated upstream
 import React from "react";
+=======
+import React, { useState, useEffect } from "react";
+import { loginRequest } from "../azureAuth.config";
+import { callMsGraph } from "../azureGraph.config";
+import { useMsal } from "@azure/msal-react";
+>>>>>>> Stashed changes
 
 /**
  * Renders information about the user obtained from MS Graph
@@ -6,6 +13,25 @@ import React from "react";
  */
 
 const ProfilePage = (props) => {
+
+  const {instance, accounts} = useMsal();
+  const [graphData, setGraphData] = useState(null);
+
+  function RequestProfileData() {
+    // Silently acquires an access token which is then attached to a request for MS Graph data
+    instance.acquireTokenSilent({
+        ...loginRequest,
+        account: accounts[0]
+    }).then((response) => {
+        callMsGraph(response.accessToken).then(response => setGraphData(response));
+    }).catch(error => console.log(error));
+  }
+
+  useEffect(() => {
+    RequestProfileData();
+    console.log(graphData);
+  })
+
 
   return (
     <>
@@ -53,7 +79,22 @@ const ProfilePage = (props) => {
           </ul>
         </div>
       </div>
+<<<<<<< Updated upstream
     </>
+=======
+      <div className="col-span-2 font-Inter text-black text-[40px] md:text-[40px] font-[700] pt-20 ">
+        { graphData ? <div> {graphData.givenName} {graphData.surname} </div> : <div> John Doe </div> }
+      </div>
+      <div className="col-span-2 pt-0"> Semester 5, 2025</div>
+      <div className="col-span-2 box-content h-20 w-90 p-4 bg-[#EEEE] m4 pt">
+        <ul className="list-none">
+          <li>Hello Everyone, my name is John Doe. I like programming and cooking.</li>
+          <li>Nice to meet you.</li>
+          <li>Github: http://</li>
+        </ul>
+      </div>
+    </div>
+>>>>>>> Stashed changes
   );
 };
 

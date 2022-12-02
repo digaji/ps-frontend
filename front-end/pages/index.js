@@ -13,6 +13,7 @@ const msalInstance = new PublicClientApplication(msalConfig);
 
 export default function Home() {
   return (
+<<<<<<< Updated upstream
     <>
       <MsalProvider instance={msalInstance}>
         <div>
@@ -20,6 +21,13 @@ export default function Home() {
           <Hero />
         </div>
       </MsalProvider>
+=======
+    <>   
+        <div>
+          <Navbar />
+          This is homepage
+        </div>
+>>>>>>> Stashed changes
     </>
   );
 }
