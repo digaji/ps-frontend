@@ -1,16 +1,16 @@
-import React from 'react' 
+import React from "react";
 import ProfilePage from "../components/ProfilePage";
 import Navbar from "../components/Navbar";
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from "../components/ProjectCard";
 
 const profile = () => {
   return (
     <div>
-    <Navbar/>
-    <ProfilePage />
-    <ProjectCard/>
+      <Navbar />
+      <ProfilePage />
+      <ProjectCard />
     </div>
-  )
-}
+  );
+};
 
-export default profile
+export default profile;

@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import ProfilePage from "../components/ProfilePage";
-import Navbar from '../components/Navbar';
+import Navbar from "../components/Navbar";
 
 const project = () => {
   return (
     <div>
-       <Navbar/>
-       <ProfilePage />
-       <ProjectCard />
-   </div>
-
+      <Navbar />
+      <ProfilePage />
+      <ProjectCard />
+    </div>
   );
 };
 
