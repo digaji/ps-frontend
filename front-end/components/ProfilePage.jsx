@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useMsal } from "@azure/msal-react";
+import { loginRequest } from "../azureAuth.config";
+import { callMsGraph } from "../azureGraph.config";
 
 function ProfilePage() {
   const [file, setFile] = useState();
@@ -6,6 +9,23 @@ function ProfilePage() {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
   }
+
+  const {instance, accounts} = useMsal();
+  const [graphData, setGraphData] = useState(null);
+
+  function RequestProfileData() {
+    // Silently acquires an access token which is then attached to a request for MS Graph data
+    instance.acquireTokenSilent({
+        ...loginRequest,
+        account: accounts[0]
+    }).then((response) => {
+        callMsGraph(response.accessToken).then(response => setGraphData(response));
+    }).catch(error => console.log(error));
+  }
+
+  useEffect(() => {
+    RequestProfileData();
+  })
 
   return (
     <div className="grid grid-cols-4 gap-4">
@@ -27,7 +47,7 @@ function ProfilePage() {
         </div>
       </div>
       <div className="col-span-2 font-Inter text-black text-[40px] md:text-[40px] font-[700] pt-20 ">
-        John Doe
+        { graphData ? <div> {graphData.givenName} {graphData.surname} </div> : <div> John Doe </div> }
       </div>
       <div className="col-span-2 pt-0"> Semester 5, 2025</div>
       <div className="col-span-2 box-content h-20 w-90 p-4 bg-[#EEEE] m4 pt">

@@ -3,11 +3,15 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from "next/image";
 import logo from "../src/site-logo.png";
+import SignInButton from "./navbarComponents/SignInButton"
+import SignOutButton from "./navbarComponents/SignOutButton"
+import { useIsAuthenticated } from "@azure/msal-react";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("#2c6698");
   const [textColor, setTextColor] = useState("white");
+  const isAuthenticated = useIsAuthenticated();
 
   const handleNav = () => {
     setNav(!nav);
@@ -48,6 +52,7 @@ const Navbar = () => {
           <li className="p-4 font-bold text-[22px]">
             <Link href="/profile">Profile</Link>
           </li>
+          { isAuthenticated ? <SignOutButton /> : <SignInButton /> }
         </ul>
 
         {/* Mobile Button */}
