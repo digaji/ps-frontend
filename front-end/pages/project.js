@@ -1,10 +1,12 @@
 import React from 'react';
 import ProjectCard from "../components/ProjectCard";
 import ProfilePage from "../components/ProfilePage";
+import Navbar from '../components/Navbar';
 
-const Hero = () => {
+const project = () => {
   return (
     <div>
+       <Navbar/>
        <ProfilePage />
        <ProjectCard />
    </div>
@@ -12,4 +14,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default project;
