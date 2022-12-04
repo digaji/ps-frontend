@@ -5,7 +5,7 @@ const ProjectCard = () => {
     <>
       <div className="px-44 font-Inter font-light text-[44px]">
         Projects List
-        <div class="border-b-4 border-black-500/100 pb-0"></div>
+        <div className="border-b-4 border-black-500/100 pb-0"></div>
       </div>
 
       <div className="max-w-[1240px] mx-auto text-black relative">
